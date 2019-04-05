@@ -6,5 +6,4 @@ public class DiceTest {
     public void createDice() {
 
     }
-
 }
