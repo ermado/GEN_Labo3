@@ -16,4 +16,8 @@ public class Player {
     public void setPiece(Piece piece) {
         this.piece = piece;
     }
+
+    public void takeTurn() {
+
+    }
 }
