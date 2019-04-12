@@ -10,10 +10,9 @@ public class Die {
 
     }
 
-    public int roll() {
+    public void roll() {
         Random random = new Random();
         faceValue = random.nextInt(6) + 1;
-        return faceValue;
     }
 
     public int getFaceValue() {
