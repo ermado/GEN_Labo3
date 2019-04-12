@@ -1,12 +1,12 @@
-import main.Square;
+import main.Player;
 import org.junit.jupiter.api.Test;
 import static org.junit.Assert.assertNotNull;
 
-public class SquareTest {
+public class PlayerTest {
 
     @Test
     public void stringConstructorShouldWork() {
-        Square square = new Square("a square");
-        assertNotNull(square);
+        Player player = new Player("a player");
+        assertNotNull(player);
     }
 }
