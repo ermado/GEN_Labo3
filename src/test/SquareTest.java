@@ -1,4 +1,4 @@
-import main.Square;
+import main.*;
 import org.junit.jupiter.api.Test;
 import static org.junit.Assert.assertNotNull;
 

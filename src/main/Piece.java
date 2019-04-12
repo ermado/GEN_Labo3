@@ -15,4 +15,3 @@ public enum Piece {
         return pieceName;
     }
 }
-
