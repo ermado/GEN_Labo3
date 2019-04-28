@@ -6,7 +6,7 @@ public class SquareTest {
 
     @Test
     public void stringConstructorShouldWork() {
-        Square square = new Square("a square");
+        Square square = new Square("a square", 2);
         assertNotNull(square);
     }
 }

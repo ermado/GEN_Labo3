@@ -1,0 +1,40 @@
+White	GO!
+White	Community Chest
+Purple	Mediterranean Avenue
+White	Income Tax
+White	Reading Railroad
+Purple	Baltic Avenue
+Blue	Oriental Avenue
+White	Chanche
+Blue	Vermont Avenue
+Blue	Connecticut Avenue
+White	Jail
+Pink	St Charles Place
+White	Electric Company
+Pink	States Avenue
+Pink	Virginia Avenue
+White	Pennsylvania Railroad
+Orange	St James Place
+White	Community Chest
+Orange	Tennessee Avenue
+Orange	New York Avenue
+White	Parking Free
+Redi	Kentucky Avenue
+White	Chanche
+Redi	Indiana Avenue
+Redi	Illinois Avenue
+White	B & O Railroad
+Yellow	Atlantic Avenue
+Yellow	Ventnor Avenue
+White	Water Works
+Yellow	Marvin Gardens
+White	Go to Jail
+Green	Pacific Avenue
+Green	North Carolina Avenue
+White	Community Chest
+Green	Pennsylvania Avenue
+White	Short Line Railroad
+White	Chanche
+Navy	Park Place
+White	Luxury Tax
+Navy	Boadwalk
