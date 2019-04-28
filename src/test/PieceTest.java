@@ -24,15 +24,15 @@ class PieceTest {
 
     @Test
     void aPieceCanChangeLocation(){
-        Square first = new Square("First");
-        Square last = new Square("Last");
+        Square first = new Square("First", 1);
+        Square last = new Square("Last", 3);
 
         Piece piece = Piece.BATTLESHIP;
         piece.setLocation(first);
-        assertSame(piece.getLocation().toString(), "First");
+        assertSame(piece.getLocation().toString(), "1 First");
 
         piece.setLocation(last);
-        assertSame(piece.getLocation().toString(),"Last");
+        assertSame(piece.getLocation().toString(),"2 Last");
 
     }
 
