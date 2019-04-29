@@ -18,30 +18,34 @@ public class Board {
         FileReader fr = new FileReader(file);
         BufferedReader br = new BufferedReader(fr);
         String line;
-        int counter = 1;
-        while((line = br.readLine()) != null){
-           if (line != "") {
-               List<String> lineTab = new ArrayList<String>(Arrays.asList(line.split("\\t")));
-               Square square = new Square(lineTab.get(1), counter++);
-               squaresOfTheBoard.add(square);
+        int counter = 0;
+        while ((line = br.readLine()) != null) {
+            if (line != "") {
+                List<String> lineTab = new ArrayList<String>(Arrays.asList(line.split("\\t")));
+                Square square = new Square(lineTab.get(1), counter++);
+                squaresOfTheBoard.add(square);
 
-           }
+            }
         }
 
     }
 
+    public Square getSquare(Square currentPos, int distance) {
+        int index = (currentPos.getNumber() + distance) % Board.BOARDSIZE;
+        return squaresOfTheBoard.get(index);
+    }
 
-    public String toString(){
+    public Square getStartSquare() {
+        return squaresOfTheBoard.get(0);
+    }
+
+    public String toString() {
         String result = "";
 
-        for (Square square : squaresOfTheBoard){
-
+        for (Square square : squaresOfTheBoard) {
             result += square.toString() + "\n";
         }
-
         return result;
-
-
     }
 
 
