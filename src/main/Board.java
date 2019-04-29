@@ -30,7 +30,6 @@ public class Board {
 
     }
 
-
     public String toString(){
         String result = "";
 

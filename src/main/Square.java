@@ -12,4 +12,12 @@ public class Square {
     public String toString() {
         return number + " " + name;
     }
+
+    String getName() {
+        return name;
+    }
+
+    int getNumber() {
+        return number;
+    }
 }
