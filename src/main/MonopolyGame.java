@@ -35,7 +35,6 @@ public class MonopolyGame {
             playRound();
         }
 
-
     }
 
     public ArrayList<Player> getPlayers() {
