@@ -4,9 +4,9 @@ import static org.junit.Assert.assertNotNull;
 
 public class PlayerTest {
 
-    @Test
-    public void stringConstructorShouldWork() {
-        Player player = new Player("a player");
-        assertNotNull(player);
-    }
+//    @Test
+//    public void stringConstructorShouldWork() {
+//        Player player = new Player("a player");
+//        assertNotNull(player);
+//    }
 }
