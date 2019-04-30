@@ -1,18 +1,17 @@
 package main;
 
+import java.util.ArrayList;
+
 public class Player {
     private String name;
     private Piece piece;
-    private Die[] dices;
+    private ArrayList<Die> dices;
     private Board board;
 
-    public Player(String name) {
-        this.name = name;
-    }
-
-    public Player(String name, Piece piece, Die[] dices, Board board) {
-        this(name);
+    public Player(Piece piece, ArrayList<Die> dices, Board board) {
+        this.name = piece.name();
         this.piece = piece;
+        this.piece.setLocation(board.getStartSquare());
         this.dices = dices;
         this.board = board;
     }
@@ -25,14 +24,14 @@ public class Player {
 
         int dieValue = 0;
 
-        for (int i = 0; i < dices.length; ++i) {
-            dices[i].roll();
-            dieValue = dices[i].getFaceValue();
+        for (int i = 0; i < dices.size(); ++i) {
+            dices.get(i).roll();
+            dieValue = dices.get(i).getFaceValue();
         }
 
-        // Square newLoc = board.getSquare(this.piece.getLocation(), dieValue);
+        Square newLoc = board.getSquare(this.piece.getLocation(), dieValue);
 
-        // piece.setLocation(newLoc);
+        piece.setLocation(newLoc);
 
     }
 }

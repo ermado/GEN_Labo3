@@ -13,13 +13,36 @@ public class MonopolyGame {
     private ArrayList<Die> dices;
 
     // Le plateau de jeu
-    //private Board board = new Board();
+    private Board board;
 
     private int roundCnt;
 
-    public MonopolyGame(ArrayList<Die> dices, ArrayList<Player> players) {
+    public MonopolyGame() {
+
+        try {
+            board = new Board();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        // Creation de 2 dés
+        Die d1 = new Die();
+        Die d2 = new Die();
+        ArrayList<Die> dices = new ArrayList<Die>();
+        dices.add(d1);
+        dices.add(d2);
         this.dices = dices;
+
+        // Creation des joueurs
+        Player p1 = new Player(Piece.CAT, dices, board);
+        Player p2 = new Player(Piece.TOPHAT, dices, board);
+        Player p3 = new Player(Piece.BATTLESHIP, dices, board);
+        ArrayList<Player> players = new ArrayList<Player>();
+        players.add(p1);
+        players.add(p2);
+        players.add(p3);
         this.players = players;
+
     }
 
     private void playRound() {
@@ -30,7 +53,6 @@ public class MonopolyGame {
 
     public void playGame() {
 
-        // TODO
         for (roundCnt = 0; roundCnt < N; ++roundCnt) {
             playRound();
         }
