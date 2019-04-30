@@ -13,11 +13,11 @@ public class Square {
         return number + " " + name;
     }
 
-    String getName() {
+    public String getName() {
         return name;
     }
 
-    int getNumber() {
+    public int getNumber() {
         return number;
     }
 }

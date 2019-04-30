@@ -4,58 +4,61 @@ import java.util.ArrayList;
 
 public class MonopolyGame {
 
-    final int N = 40;
+    private static final int N = 20;
+    private static final int NBDICES = 2;
 
-    // 2 to 8 players per game
-    private ArrayList<Player> players;
+    private ArrayList<Player> players = new ArrayList<Player>();
+    private ArrayList<Die> dices = new ArrayList<Die>();
 
-    // 2 dices per game
-    private ArrayList<Die> dices;
+    private Board board; //Le plateau de jeu
 
-    // Le plateau de jeu
-    private Board board;
-
-    private int roundCnt;
-
-    public MonopolyGame() {
-
+    public MonopolyGame(int nbPlayers) {
         try {
             board = new Board();
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        // Creation de 2 dés
-        Die d1 = new Die();
-        Die d2 = new Die();
-        ArrayList<Die> dices = new ArrayList<Die>();
-        dices.add(d1);
-        dices.add(d2);
-        this.dices = dices;
+        for (int i = 0; i < NBDICES; i++) {
+            addDie();
+        }
 
-        // Creation des joueurs
-        Player p1 = new Player(Piece.CAT, dices, board);
-        Player p2 = new Player(Piece.TOPHAT, dices, board);
-        Player p3 = new Player(Piece.BATTLESHIP, dices, board);
-        ArrayList<Player> players = new ArrayList<Player>();
-        players.add(p1);
-        players.add(p2);
-        players.add(p3);
-        this.players = players;
+        for (int i = 0; i < nbPlayers; i++) {
+            addPlayer(i);
+        }
+    }
 
+    private void addDie() {
+        Die die = new Die();
+        dices.add(die);
+    }
+
+    private void addPlayer(int index) {
+        Player player = new Player(Piece.values()[index], dices, board);
+        players.add(player);
     }
 
     private void playRound() {
         for (Player player : players) {
+            System.out.println();
+            System.out.println("    It's the turn of " + player.getName());
             player.takeTurn();
+            System.out.println();
         }
     }
 
     public void playGame() {
 
-        for (roundCnt = 0; roundCnt < N; ++roundCnt) {
-            playRound();
+        System.out.println("------Playing the game!------");
+        if (players.size() >= 2) {
+            for (int roundCnt = 0; roundCnt < N; ++roundCnt) {
+                System.out.println("Round - " + roundCnt);
+                playRound();
+            }
+        } else {
+            System.out.println("Sorry not enough players to play the game");
         }
+        System.out.println("------End of the game!-------");
 
     }
 

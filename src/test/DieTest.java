@@ -15,7 +15,12 @@ public class DieTest {
     @Test
     public void rollValueMustBeBetweenOneAndSix() {
         Die die = new Die();
-        die.roll();
-        assertTrue(1 <= die.getFaceValue() && die.getFaceValue() <= 6);
+        int counter = 50;
+        while (counter >= 0) {
+            die.roll();
+            assertTrue(1 <= die.getFaceValue() && die.getFaceValue() <= 6);
+            counter--;
+        }
+
     }
 }
