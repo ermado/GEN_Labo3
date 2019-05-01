@@ -13,18 +13,14 @@ Brief : This class implement the tests on the Player class.
 
 ---------------------------------------------------------*/
 
-import main.Board;
-import main.Die;
-import main.Piece;
-import main.Player;
+import main.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Logger;
 
-import static org.junit.Assert.assertEquals;
-
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PlayerTest {
 
@@ -35,7 +31,7 @@ public class PlayerTest {
         }
     }
     private Board board;
-    private ArrayList<Die> dices = new ArrayList<Die>();
+    private Cup cup;
     private static final Logger LOG = Logger.getLogger("log");
 
 
@@ -46,10 +42,13 @@ public class PlayerTest {
             board = new Board();
             LOG.info("Board Created");
 
+            ArrayList<Die> pipedDices = new ArrayList<>();
             Die d1 = new PipedDie();
             Die d2 = new PipedDie();
-            dices.add(d1);
-            dices.add(d2);
+            pipedDices.add(d1);
+            pipedDices.add(d2);
+            cup = new Cup(2);
+            cup.setDices(pipedDices);
             LOG.info("Dices Created");
 
         } catch (IOException e) {
@@ -60,14 +59,14 @@ public class PlayerTest {
 
     @Test
     public void aPlayerIsCreatedInAGameBoard() {
-        Player player = new Player(Piece.CAT,dices,board);
+        Player player = new Player(Piece.CAT, cup, board);
         assertEquals("0 GO!",player.getLocation().toString());
         assertEquals("The cat",player.getName());
 
     }
     @Test
     public void aPlayerCanMoveIntoTheBoard() {
-        Player player = new Player(Piece.CAT,dices,board);
+        Player player = new Player(Piece.CAT, cup, board);
         /*A pipedDie always give 3, so with two dices we should always move 6 squares at the time*/
         player.takeTurn();
         assertEquals("6 Oriental Avenue",player.getLocation().toString());

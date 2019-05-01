@@ -22,6 +22,7 @@ public class MonopolyGame {
     private static final int MINPLAYERS = 2;
     private static final int NBROUNDS = 20;
     private static final int NBDICES = 2;
+    private static final int STARTMONEY = 1500;
 
     private int nbPlayers;
     private Board board;
@@ -73,6 +74,7 @@ public class MonopolyGame {
 
     private void addPlayer(int index) {
         Player player = new Player(Piece.values()[index], dices, board);
+        player.setCash(STARTMONEY);
         players.add(player);
     }
 
