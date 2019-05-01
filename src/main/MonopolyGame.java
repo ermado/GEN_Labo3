@@ -1,31 +1,23 @@
 package main;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class MonopolyGame {
 
-    private static final int N = 20;
+    private static final int MAXPLAYERS = 8;
+    private static final int MINPLAYERS = 2;
+    private static final int NBROUNDS = 20;
     private static final int NBDICES = 2;
 
+    private int nbPlayers;
+    private Board board;
     private ArrayList<Player> players = new ArrayList<Player>();
     private ArrayList<Die> dices = new ArrayList<Die>();
 
-    private Board board; //Le plateau de jeu
-
-    public MonopolyGame(int nbPlayers) {
-        try {
-            board = new Board();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        for (int i = 0; i < NBDICES; i++) {
-            addDie();
-        }
-
-        for (int i = 0; i < nbPlayers; i++) {
-            addPlayer(i);
-        }
+    public MonopolyGame(int nbPlayers) throws IOException {
+        board = new Board();
+        this.nbPlayers = nbPlayers;
     }
 
     private void addDie() {
@@ -48,17 +40,35 @@ public class MonopolyGame {
     }
 
     public void playGame() {
-
         System.out.println("------Playing the game!------");
-        if (players.size() >= 2) {
-            for (int roundCnt = 0; roundCnt < N; ++roundCnt) {
-                System.out.println("Round - " + roundCnt);
-                playRound();
+        if (nbPlayers >= MINPLAYERS) {
+            if (nbPlayers <= MAXPLAYERS) {
+                setUp();
+                play();
+            } else {
+                System.out.println("Sorry, too many players to play the game");
             }
         } else {
-            System.out.println("Sorry not enough players to play the game");
+            System.out.println("Sorry, not enough players to play the game");
         }
         System.out.println("------End of the game!-------");
+
+    }
+
+    private void setUp() {
+        for (int i = 0; i < NBDICES; i++) {
+            addDie();
+        }
+        for (int i = 0; i < nbPlayers; i++) {
+            addPlayer(i);
+        }
+    }
+
+    private void play() {
+        for (int round = 0; round < NBROUNDS; ++round) {
+            System.out.println("Round - " + round);
+            playRound();
+        }
 
     }
 

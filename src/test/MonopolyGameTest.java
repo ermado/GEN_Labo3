@@ -27,23 +27,40 @@ public class MonopolyGameTest {
 
     @Test
     public void aNewMonopolyGameShouldWork() {
-        MonopolyGame mgame = new MonopolyGame(4);
         try {
+            MonopolyGame mgame = new MonopolyGame(4);
             mgame.playGame();
+            LOG.info(outContent.toString());
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         // better test?
     }
 
     @Test
     public void aNewMonopolyGameShouldNotWorkIfNotEnoughPlayers() {
-        MonopolyGame mgame = new MonopolyGame(1);
-        mgame.playGame();
-        assertEquals("------Playing the game!------\r\n" +
-                      "Sorry not enough players to play the game\r\n" +
-                      "------End of the game!-------\r\n", outContent.toString());
+        try {
+            MonopolyGame mgame = new MonopolyGame(1);
+            mgame.playGame();
+            assertEquals("------Playing the game!------\r\n" +
+                    "Sorry, not enough players to play the game\r\n" +
+                    "------End of the game!-------\r\n", outContent.toString());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void aNewMonopolyGameShouldNotWorkIfTooManyPlayers() {
+        try {
+            MonopolyGame mgame = new MonopolyGame(10);
+            mgame.playGame();
+            assertEquals("------Playing the game!------\r\n" +
+                    "Sorry, too many players to play the game\r\n" +
+                    "------End of the game!-------\r\n", outContent.toString());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }
