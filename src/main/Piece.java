@@ -1,3 +1,17 @@
+/* ------------------------------------------------------
+GEN- LAB 3
+File : Piece
+Authors : Carpita Edoardo, Dutu Launay Marion, Moreira Erwan
+Date : 01-05-2019
+
+Brief : This enum class implement all the pieces of a Monopoly
+        game.
+
+        We decided to use a enum to easily index and give
+        a proper String name to its component.
+
+---------------------------------------------------------*/
+
 package main;
 
 public enum Piece {

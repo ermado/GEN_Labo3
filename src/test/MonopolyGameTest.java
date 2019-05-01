@@ -1,10 +1,22 @@
+/* ------------------------------------------------------
+GEN- LAB 3
+File : MonopolyGameTest
+Authors : Carpita Edoardo, Dutu Launay Marion, Moreira Erwan
+Date : 01-05-2019
+
+Brief : This class implement the tests on the MonopolyGame class.
+
+       To verify the correct out screens, before each test the
+       system output is deviated to a byte array to verify
+       it's content. It's restored after each test
+
+---------------------------------------------------------*/
+
 import main.*;
 import org.junit.jupiter.api.*;
-
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.logging.Logger;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MonopolyGameTest {
@@ -34,7 +46,7 @@ public class MonopolyGameTest {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        // better test?
+
     }
 
     @Test

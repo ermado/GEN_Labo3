@@ -1,3 +1,16 @@
+/* ------------------------------------------------------
+GEN- LAB 3
+File : MonopolyGame
+Authors : Carpita Edoardo, Dutu Launay Marion, Moreira Erwan
+Date : 01-05-2019
+
+Brief : This class implement the main program of the game
+        It uses all other created classes to create the
+        components of a monopoly game while verifing the
+        user entries (ex: a valid number of players)
+
+---------------------------------------------------------*/
+
 package main;
 
 import java.io.IOException;
@@ -18,25 +31,6 @@ public class MonopolyGame {
     public MonopolyGame(int nbPlayers) throws IOException {
         board = new Board();
         this.nbPlayers = nbPlayers;
-    }
-
-    private void addDie() {
-        Die die = new Die();
-        dices.add(die);
-    }
-
-    private void addPlayer(int index) {
-        Player player = new Player(Piece.values()[index], dices, board);
-        players.add(player);
-    }
-
-    private void playRound() {
-        for (Player player : players) {
-            System.out.println();
-            System.out.println("    It's the turn of " + player.getName());
-            player.takeTurn();
-            System.out.println();
-        }
     }
 
     public void playGame() {
@@ -72,7 +66,23 @@ public class MonopolyGame {
 
     }
 
-    public ArrayList<Player> getPlayers() {
-        return players;
+    private void addDie() {
+        Die die = new Die();
+        dices.add(die);
     }
+
+    private void addPlayer(int index) {
+        Player player = new Player(Piece.values()[index], dices, board);
+        players.add(player);
+    }
+
+    private void playRound() {
+        for (Player player : players) {
+            System.out.println();
+            System.out.println("    It's the turn of " + player.getName());
+            player.takeTurn();
+            System.out.println();
+        }
+    }
+
 }
