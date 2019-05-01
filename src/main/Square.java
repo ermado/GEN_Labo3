@@ -14,7 +14,7 @@ Brief : This class implement the squares that compose the
 
 package main;
 
-public class Square {
+public abstract class Square {
     private String name;
     private int number;
 
@@ -34,4 +34,6 @@ public class Square {
     public int getNumber() {
         return number;
     }
+
+    public abstract void landedOn(Player player);
 }

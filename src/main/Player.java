@@ -45,7 +45,7 @@ public class Player {
         }
         System.out.println("    Rolling the dices! The sum is a : " + dieValue);
 
-        Square newLoc = board.getSquare(this.piece.getLocation(), dieValue);
+        Square newLoc = board.getRelativeSquare(this.piece.getLocation(), dieValue);
         piece.setLocation(newLoc);
 
         System.out.println("    " + this.name + "is moving to : " + piece.getLocation().toString());
@@ -55,6 +55,11 @@ public class Player {
     public Square getLocation() {
         return this.piece.getLocation();
     }
+
+    public void setLocation(int index){
+        Square newLoc = board.getAbsoluteSquare(index);
+        piece.setLocation(newLoc);
+    };
 
     public String getName() {
         return this.name;
