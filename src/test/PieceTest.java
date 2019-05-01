@@ -1,6 +1,5 @@
 import main.*;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class PieceTest {
@@ -8,18 +7,16 @@ class PieceTest {
     @Test
     void numberOfPiecesShouldBeEight(){
         assertEquals(Piece.values().length, 8);
-
     }
 
     @Test
-    void aPieceShouldHaveACorrectCorrespondantString(){
+    void aPieceShouldHaveACorrectCorrespondentString(){
         Piece piece = Piece.BATTLESHIP;
-        assertTrue(piece.toString() == "The battleship");
+        assertEquals("The battleship", piece.toString());
 
         piece = Piece.SCOTTIEDOG;
-        assertTrue(piece.toString() != "The battleship");
-        assertTrue(piece.toString() == "The Scottie Dog");
-
+        assertNotEquals("The battleship", piece.toString());
+        assertEquals("The Scottie Dog", piece.toString());
     }
 
     @Test
@@ -29,11 +26,9 @@ class PieceTest {
 
         Piece piece = Piece.BATTLESHIP;
         piece.setLocation(first);
-        assertSame(piece.getLocation().toString(), "1 First");
-
+        assertEquals("1 First", piece.getLocation().toString());
         piece.setLocation(last);
-        assertSame(piece.getLocation().toString(),"2 Last");
-
+        assertEquals("3 Last", piece.getLocation().toString());
     }
 
 }
