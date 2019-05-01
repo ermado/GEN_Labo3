@@ -1,3 +1,13 @@
+/* ------------------------------------------------------
+GEN- LAB 3
+File : PieceTest
+Authors : Carpita Edoardo, Dutu Launay Marion, Moreira Erwan
+Date : 01-05-2019
+
+Brief : This class implement the tests on the Piece class.
+
+---------------------------------------------------------*/
+
 import main.*;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;

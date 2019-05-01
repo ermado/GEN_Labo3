@@ -1,7 +1,17 @@
+/* ------------------------------------------------------
+GEN- LAB 3
+File : BoardTest
+Authors : Carpita Edoardo, Dutu Launay Marion, Moreira Erwan
+Date : 01-05-2019
+
+Brief : This class implement the tests on the Board class.
+
+---------------------------------------------------------*/
+
+
 import main.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import java.util.logging.Logger;
 import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -9,20 +19,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class BoardTest {
 
-    Board board;
+    private Board board;
     private static final Logger LOG = Logger.getLogger("log");
 
     @BeforeEach
     void createTheBoard() {
-
         try {
             board = new Board();
-            //System.out.println(board.toString());
             LOG.info("Board Created");
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     @Test
