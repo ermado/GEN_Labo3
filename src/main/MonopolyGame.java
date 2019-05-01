@@ -28,6 +28,7 @@ public class MonopolyGame {
     private Board board;
     private ArrayList<Player> players = new ArrayList<Player>();
     private ArrayList<Die> dices = new ArrayList<Die>();
+    private Cup cup;
 
     public MonopolyGame(int nbPlayers) throws IOException {
         board = new Board();
@@ -51,6 +52,8 @@ public class MonopolyGame {
     }
 
     private void setUp() {
+        cup = new Cup(NBDICES);
+
         for (int i = 0; i < NBDICES; i++) {
             addDie();
         }
@@ -73,7 +76,7 @@ public class MonopolyGame {
     }
 
     private void addPlayer(int index) {
-        Player player = new Player(Piece.values()[index], dices, board);
+        Player player = new Player(Piece.values()[index], cup, board);
         player.setCash(STARTMONEY);
         players.add(player);
     }

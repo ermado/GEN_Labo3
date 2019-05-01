@@ -35,16 +35,17 @@ public class Player {
     }
 
     public void takeTurn() {
-        int dieValue = 0;
         cup.roll();
-        dieValue = cup.getTotal();
+        int dieValue = cup.getTotal();
+
         System.out.println("    Rolling the dices! The sum is a : " + dieValue);
 
-        Square newLoc = board.getRelativeSquare(this.piece.getLocation(), dieValue);
-        piece.setLocation(newLoc);
+        Square newLocation = board.getRelativeSquare(this.piece.getLocation(), dieValue);
+        piece.setLocation(newLocation);
 
-        System.out.println("    " + this.name + "is moving to : " + piece.getLocation().toString());
+        System.out.println("    " + this.name + " is moving to : " + piece.getLocation().toString());
 
+        newLocation.landedOn(this);
     }
 
     public Square getLocation() {
@@ -52,8 +53,12 @@ public class Player {
     }
 
     public void setLocation(int index){
-        Square newLoc = board.getAbsoluteSquare(index);
-        piece.setLocation(newLoc);
+        Square newLocation = board.getAbsoluteSquare(index);
+        piece.setLocation(newLocation);
+
+        System.out.println("    " + this.name + " is moving to : " + piece.getLocation().toString());
+
+        newLocation.landedOn(this);
     };
 
     public String getName() {

@@ -42,11 +42,11 @@ public class Board {
 
         while ((line = br.readLine()) != null) {
             if (line != "") {
-                /* all valuable info are divided with a tab in the config fila */
+                /* all valuable info are divided with a tab in the config file */
                 List<String> lineTab = new ArrayList<String>(Arrays.asList(line.split(";")));
                 String typeOfSquare = lineTab.get(0);
 
-                if (typeOfSquare == "GTJail") {
+                if (typeOfSquare.equals("GTJail")) {
                     Square square = new GoToJailSquare(lineTab.get(2), counter++);
                     squaresOfTheBoard.add(square);
                 } else {

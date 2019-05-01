@@ -9,9 +9,8 @@ Brief : This class implement the tests on the Square class.
 ---------------------------------------------------------*/
 import main.*;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.Assert.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class SquareTest {
 
@@ -28,7 +27,6 @@ public class SquareTest {
         assertEquals("40 Cuisenaire Boulevard", square.toString());
     }
 
-
     @Test
     public void differentTypeOfSquaresCanBeCreated() {
         Square square1 = new RegularSquare("Little Road", 22);
@@ -36,6 +34,5 @@ public class SquareTest {
         assertNotEquals(square1.getClass(), square2.getClass());
         assertEquals(square1.getClass().getSuperclass(), square2.getClass().getSuperclass());
     }
-
 
 }
