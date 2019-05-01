@@ -19,30 +19,25 @@ Brief : This class implement the Player of the game.
 
 package main;
 
-import java.util.ArrayList;
-
 public class Player {
     private Board board;
     private String name;
     private Piece piece;
-    private ArrayList<Die> dices;
+    private Cup cup;
+    private double cash;
 
-
-    public Player(Piece piece, ArrayList<Die> dices, Board board) {
+    public Player(Piece piece, Cup cup, Board board) {
         this.name = piece.toString();
         this.piece = piece;
         this.piece.setLocation(board.getStartSquare());
-        this.dices = dices;
+        this.cup = cup;
         this.board = board;
     }
 
     public void takeTurn() {
         int dieValue = 0;
-        for (int i = 0; i < dices.size(); ++i) {
-            /*roll the dices and sum the result */
-            dices.get(i).roll();
-            dieValue += dices.get(i).getFaceValue();
-        }
+        cup.roll();
+        dieValue = cup.getTotal();
         System.out.println("    Rolling the dices! The sum is a : " + dieValue);
 
         Square newLoc = board.getRelativeSquare(this.piece.getLocation(), dieValue);
@@ -63,5 +58,13 @@ public class Player {
 
     public String getName() {
         return this.name;
+    }
+
+    public double getCash() {
+        return cash;
+    }
+
+    public void setCash(double cash) {
+        this.cash = cash;
     }
 }

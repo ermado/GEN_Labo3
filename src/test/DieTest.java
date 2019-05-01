@@ -10,8 +10,9 @@ Brief : This class implement the tests on the Die class.
 
 import main.Die;
 import org.junit.jupiter.api.Test;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class DieTest {
 
