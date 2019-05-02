@@ -9,6 +9,7 @@ Brief : This class implement the tests on the Die class.
 ---------------------------------------------------------*/
 
 import main.Die;
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -22,15 +23,10 @@ public class DieTest {
         assertNotNull(die);
     }
 
-    @Test
+    @RepeatedTest(50)
     public void rollValueMustBeBetweenOneAndSix() {
         Die die = new Die();
-        int counter = 50;
-        while (counter >= 0) {
-            die.roll();
-            assertTrue(1 <= die.getFaceValue() && die.getFaceValue() <= 6);
-            counter--;
-        }
-
+        die.roll();
+        assertTrue(1 <= die.getFaceValue() && die.getFaceValue() <= 6);
     }
 }
