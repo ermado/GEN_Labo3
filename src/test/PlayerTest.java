@@ -4,12 +4,12 @@ File : PlayerTest
 Authors : Carpita Edoardo, Dutu Launay Marion, Moreira Erwan
 Date : 01-05-2019
 
-Brief : This class implement the tests on the Player class.
+Brief : This class implements the tests on the Player class.
 
-        To verify the correct implementation to the takeTurn()
+        To verify the correct implementation of the takeTurn()
         method, we created a internal class PipedDie to create
-        dices that will always give a face of 3 at every turn
-        by overriding the roll() method
+        dices that will give a face with a defined value at
+        every turn, by overriding the roll() method.
 
 ---------------------------------------------------------*/
 
@@ -48,6 +48,9 @@ public class PlayerTest {
     private static final Logger LOG = Logger.getLogger("log");
 
 
+    /**
+     * We use the same board and piped dices for the following tests
+     */
     @BeforeEach
     void createTheBoardAndTheDices() {
 
@@ -55,7 +58,7 @@ public class PlayerTest {
             board = new Board();
             LOG.info("Board Created");
 
-            ArrayList<Die> pipedDices = new ArrayList<Die>();
+            ArrayList<Die> pipedDices = new ArrayList<>();
             Die d1 = new PipedDie(3);
             Die d2 = new PipedDie(3);
             pipedDices.add(d1);
@@ -80,7 +83,7 @@ public class PlayerTest {
     @Test
     public void aPlayerCanMoveIntoTheBoard() {
         Player player = new Player(Piece.CAT, cup, board);
-        /*This pipedDie always give 3, so with two dices we should always move 6 squares at the time*/
+        /* This pipedDie always give 3, so with two dices we should always move 6 squares at the time*/
         player.takeTurn();
         assertEquals("6 Oriental Avenue",player.getLocation().toString());
         player.takeTurn();
@@ -89,7 +92,7 @@ public class PlayerTest {
 
     @Test
     public void aPlayerThatLandOnaGTJSquareShouldBeSentToJail() {
-        ArrayList<Die> pipedDices = new ArrayList<Die>();
+        ArrayList<Die> pipedDices = new ArrayList<>();
         Die d1 = new PipedDie(15);
         Die d2 = new PipedDie(15);
         pipedDices.add(d1);

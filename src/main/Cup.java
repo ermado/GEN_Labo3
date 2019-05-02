@@ -41,6 +41,7 @@ public class Cup {
         return dices;
     }
 
+    /* Useful when we want to fill the cup with piped dices and not regular ones */
     public void setDices(ArrayList<Die> newDices) {
         this.dices = newDices;
     }

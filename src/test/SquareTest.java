@@ -4,7 +4,7 @@ File : SquareTest
 Authors : Carpita Edoardo, Dutu Launay Marion, Moreira Erwan
 Date : 01-05-2019
 
-Brief : This class implement the tests on the Square class.
+Brief : This class implements the tests on the Square class.
 
 ---------------------------------------------------------*/
 import main.*;

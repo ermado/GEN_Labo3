@@ -4,9 +4,9 @@ File : Board
 Authors : Carpita Edoardo, Dutu Launay Marion, Moreira Erwan
 Date : 01-05-2019
 
-Brief : This class implement the board of the game, we decided
-        to implement this with a config file created with all
-        the squares name (and colors for future implementation).
+Brief : This class implements the board of the game. We decided
+        to implement it with a config file created with all
+        the squares names (and colors for a future implementation).
 
         This enable a more simple way to load all needed
         information of the board keeping an evolutive approach.
@@ -28,7 +28,7 @@ public class Board {
     private ArrayList<Square> squaresOfTheBoard;
 
     public Board() throws IOException {
-        squaresOfTheBoard = new ArrayList<Square>(BOARDSIZE);
+        squaresOfTheBoard = new ArrayList<>(BOARDSIZE);
         loadBoard();
     }
 
@@ -41,9 +41,9 @@ public class Board {
         int counter = 0;
 
         while ((line = br.readLine()) != null) {
-            if (line != "") {
-                /* all valuable info are divided with a ; in the config file */
-                List<String> lineTab = new ArrayList<String>(Arrays.asList(line.split(";")));
+            if (!line.equals("")) {
+                /* All valuable infos are divided with a ; in the config file */
+                List<String> lineTab = new ArrayList<>(Arrays.asList(line.split(";")));
                 String typeOfSquare = lineTab.get(0);
 
                 switch (typeOfSquare) {
@@ -94,5 +94,4 @@ public class Board {
         }
         return result;
     }
-
 }

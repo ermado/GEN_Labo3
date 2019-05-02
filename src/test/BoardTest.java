@@ -4,10 +4,9 @@ File : BoardTest
 Authors : Carpita Edoardo, Dutu Launay Marion, Moreira Erwan
 Date : 01-05-2019
 
-Brief : This class implement the tests on the Board class.
+Brief : This class implements the tests on the Board class.
 
 ---------------------------------------------------------*/
-
 
 import main.*;
 import org.junit.jupiter.api.BeforeEach;
@@ -16,12 +15,14 @@ import java.util.logging.Logger;
 import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
 class BoardTest {
 
     private Board board;
     private static final Logger LOG = Logger.getLogger("log");
 
+    /**
+     * We will use the same board for each test instead of creating new ones
+     */
     @BeforeEach
     void createTheBoard() {
         try {
@@ -39,7 +40,7 @@ class BoardTest {
     }
 
     @Test
-    void getASquareAfterADeplacement() {
+    void getASquareAfterAMove() {
         Square sq = board.getStartSquare();
 
         sq = board.getRelativeSquare(sq, 1);
@@ -54,7 +55,7 @@ class BoardTest {
 
 
     @Test
-    void getASquareAfterADeplacementInBoardLimits() {
+    void getASquareAfterAMoveInBoardLimits() {
         Square sq = board.getStartSquare();
 
         sq = board.getRelativeSquare(sq, 19);
