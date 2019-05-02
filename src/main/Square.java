@@ -4,11 +4,11 @@ File : Square
 Authors : Carpita Edoardo, Dutu Launay Marion, Moreira Erwan
 Date : 01-05-2019
 
-Brief : This class implement the squares that compose the
-        board of the game
+Brief : This abstract class defines the squares that compose the
+        board of the game.
 
         It's a pretty straightforward class, every square
-        has a name and a corresponding number
+        has a name and a corresponding number.
 
 ---------------------------------------------------------*/
 
@@ -35,5 +35,9 @@ public abstract class Square {
         return number;
     }
 
+    /**
+     * This method is used to define the actions done to a player when he
+     * lands on it.
+     */
     public abstract void landedOn(Player player);
 }

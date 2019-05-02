@@ -4,16 +4,16 @@ File : Player
 Authors : Carpita Edoardo, Dutu Launay Marion, Moreira Erwan
 Date : 01-05-2019
 
-Brief : This class implement the Player of the game.
+Brief : This class implements the players of the game.
 
         To properly move in the game, every player has to
-        access to the board and the dices used. This explain
-        why they are implemented as methods of the class
+        access to the board and the dices used. This explains
+        why they are implemented as methods of the class.
 
-        For know, a player name correspond also at the name
-        of it's piece, but we left the two entities separated
+        For now, a player name corresponds also with the name
+        of its piece, but we left the two entities separated
         if this situation may need to change in future
-        implementations
+        implementations.
 
 ---------------------------------------------------------*/
 
@@ -34,6 +34,9 @@ public class Player {
         this.board = board;
     }
 
+    /**
+     * This function simulates a player's turn
+     */
     public void takeTurn() {
         cup.roll();
         int dieValue = cup.getTotal();
@@ -80,6 +83,5 @@ public class Player {
     public void setCash(double cash) {
         this.cash = cash;
     }
-
 
 }

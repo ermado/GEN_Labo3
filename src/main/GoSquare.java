@@ -1,3 +1,14 @@
+/* ------------------------------------------------------
+GEN- LAB 3
+File : GoSquare
+Authors : Carpita Edoardo, Dutu Launay Marion, Moreira Erwan
+Date : 01-05-2019
+
+Brief : This class implements the GoSquare, which is the first
+        square of the board.
+
+---------------------------------------------------------*/
+
 package main;
 
 public class GoSquare extends Square {

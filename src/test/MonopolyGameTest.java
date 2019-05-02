@@ -4,11 +4,11 @@ File : MonopolyGameTest
 Authors : Carpita Edoardo, Dutu Launay Marion, Moreira Erwan
 Date : 01-05-2019
 
-Brief : This class implement the tests on the MonopolyGame class.
+Brief : This class implements the tests on the MonopolyGame class.
 
        To verify the correct out screens, before each test the
        system output is deviated to a byte array to verify
-       it's content. It's restored after each test
+       its content. It is restored after each test.
 
 ---------------------------------------------------------*/
 

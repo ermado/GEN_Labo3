@@ -4,9 +4,9 @@ File : MonopolyGame
 Authors : Carpita Edoardo, Dutu Launay Marion, Moreira Erwan
 Date : 01-05-2019
 
-Brief : This class implement the main program of the game
+Brief : This class implements the main program of the game
         It uses all other created classes to create the
-        components of a monopoly game while verifing the
+        components of a monopoly game while verifying the
         user entries (ex: a valid number of players)
 
 ---------------------------------------------------------*/
@@ -27,7 +27,7 @@ public class MonopolyGame {
 
     private int nbPlayers;
     private Board board;
-    private ArrayList<Player> players = new ArrayList<Player>();
+    private ArrayList<Player> players = new ArrayList<>();
     private Cup cup;
 
     public MonopolyGame(int nbPlayers) throws IOException {
@@ -35,6 +35,9 @@ public class MonopolyGame {
         this.nbPlayers = nbPlayers;
     }
 
+    /**
+     * This function simulates the whole monopoly game
+     */
     public void playGame() {
         System.out.println("------Playing the game!------");
         if (nbPlayers >= MINPLAYERS) {
@@ -51,7 +54,11 @@ public class MonopolyGame {
 
     }
 
+    /**
+     * This function sets up the cup used by the players and creates the players
+     */
     private void setUp() {
+
         cup = new Cup(NBDICES);
 
         for (int i = 0; i < nbPlayers; i++) {
@@ -59,6 +66,9 @@ public class MonopolyGame {
         }
     }
 
+    /**
+     * This function simulates the given number of rounds
+     */
     private void play() {
         for (int round = 0; round < NBROUNDS; ++round) {
             System.out.println("Round - " + (round+1));
@@ -73,6 +83,9 @@ public class MonopolyGame {
         players.add(player);
     }
 
+    /**
+     * This function simulates a round for each player
+     */
     private void playRound() {
         for (Player player : players) {
             System.out.println();
