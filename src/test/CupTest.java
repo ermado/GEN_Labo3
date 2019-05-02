@@ -1,10 +1,10 @@
 /* ------------------------------------------------------
 GEN- LAB 3
-File : DieTest
+File : CupTest
 Authors : Carpita Edoardo, Dutu Launay Marion, Moreira Erwan
 Date : 01-05-2019
 
-Brief : This class implement the tests on the Die class.
+Brief : This class implements the tests on the Cup class.
 
 ---------------------------------------------------------*/
 
