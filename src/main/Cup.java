@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Cup {
 
-    private ArrayList<Die> dices = new ArrayList<>();
+    private ArrayList<Die> dices = new ArrayList<Die>();
     private int total;
 
     public Cup(int numberOfDices) {
@@ -14,6 +14,7 @@ public class Cup {
     }
 
     public void roll() {
+        total = 0;
         for (Die die : dices) {
             die.roll();
             total += die.getFaceValue();

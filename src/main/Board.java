@@ -42,17 +42,29 @@ public class Board {
 
         while ((line = br.readLine()) != null) {
             if (line != "") {
-                /* all valuable info are divided with a tab in the config fila */
-                List<String> lineTab = new ArrayList<String>(Arrays.asList(line.split("\\t")));
-                Square square = new Square(lineTab.get(1), counter++);
-                squaresOfTheBoard.add(square);
+                /* all valuable info are divided with a tab in the config file */
+                List<String> lineTab = new ArrayList<String>(Arrays.asList(line.split(";")));
+                String typeOfSquare = lineTab.get(0);
+
+                if (typeOfSquare.equals("GTJail")) {
+                    Square square = new GoToJailSquare(lineTab.get(2), counter++);
+                    squaresOfTheBoard.add(square);
+                } else {
+                    Square square = new RegularSquare(lineTab.get(2), counter++);
+                    squaresOfTheBoard.add(square);
+                }
             }
         }
     }
 
-    public Square getSquare(Square currentPos, int distance) {
+
+    public Square getRelativeSquare(Square currentPos, int distance) {
         int index = (currentPos.getNumber() + distance) % Board.BOARDSIZE;
         return squaresOfTheBoard.get(index);
+    }
+
+    public Square getAbsoluteSquare(int index) {
+        return squaresOfTheBoard.get(index % Board.BOARDSIZE);
     }
 
     public Square getStartSquare() {

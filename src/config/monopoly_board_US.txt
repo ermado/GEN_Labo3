@@ -1,40 +1,40 @@
-White	GO!
-White	Community Chest
-Purple	Mediterranean Avenue
-White	Income Tax
-White	Reading Railroad
-Purple	Baltic Avenue
-Blue	Oriental Avenue
-White	Chanche
-Blue	Vermont Avenue
-Blue	Connecticut Avenue
-White	Jail
-Pink	St Charles Place
-White	Electric Company
-Pink	States Avenue
-Pink	Virginia Avenue
-White	Pennsylvania Railroad
-Orange	St James Place
-White	Community Chest
-Orange	Tennessee Avenue
-Orange	New York Avenue
-White	Parking Free
-Red 	Kentucky Avenue
-White	Chanche
-Red 	Indiana Avenue
-Red 	Illinois Avenue
-White	B & O Railroad
-Yellow	Atlantic Avenue
-Yellow	Ventnor Avenue
-White	Water Works
-Yellow	Marvin Gardens
-White	Go to Jail
-Green	Pacific Avenue
-Green	North Carolina Avenue
-White	Community Chest
-Green	Pennsylvania Avenue
-White	Short Line Railroad
-White	Chanche
-Navy	Park Place
-White	Luxury Tax
-Navy	Boadwalk
+Go;White;GO!
+Regular;White;Community Chest
+Regular;Purple;Mediterranean Avenue
+Tax;White;Income Tax
+Regular;White;Reading Railroad
+Regular;Purple;Baltic Avenue
+Regular;Blue;Oriental Avenue
+Regular;White;Chanche
+Regular;Blue;Vermont Avenue
+Regular;Blue;Connecticut Avenue
+Regular;White;Jail
+Regular;Pink;St Charles Place
+Regular;White;Electric Company
+Regular;Pink;States Avenue
+Regular;Pink;Virginia Avenue
+Regular;White;Pennsylvania Railroad
+Regular;Orange;St James Place
+Regular;White;Community Chest
+Regular;Orange;Tennessee Avenue
+Regular;Orange;New York Avenue
+Regular;White;Parking Free
+Regular;Red;Kentucky Avenue
+Regular;White;Chanche
+Regular;Red;Indiana Avenue
+Regular;Red;Illinois Avenue
+Regular;White;B & O Railroad
+Regular;Yellow;Atlantic Avenue
+Regular;Yellow;Ventnor Avenue
+Regular;White;Water Works
+Regular;Yellow;Marvin Gardens
+GTJail;White;Go to Jail
+Regular;Green;Pacific Avenue
+Regular;Green;North Carolina Avenue
+Regular;White;Community Chest
+Regular;Green;Pennsylvania Avenue
+Regular;White;Short Line Railroad
+Regular;White;Chanche
+Regular;Navy;Park Place
+Tax;White;Luxury Tax
+Regular;Navy;Boadwalk

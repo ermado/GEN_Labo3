@@ -31,8 +31,8 @@ class PieceTest {
 
     @Test
     void aPieceCanChangeLocation(){
-        Square first = new Square("First", 1);
-        Square last = new Square("Last", 3);
+        Square first = new RegularSquare("First", 1);
+        Square last = new RegularSquare("Last", 3);
 
         Piece piece = Piece.BATTLESHIP;
         piece.setLocation(first);
