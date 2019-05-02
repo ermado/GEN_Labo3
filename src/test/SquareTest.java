@@ -1,6 +1,6 @@
 /* ------------------------------------------------------
 GEN- LAB 3
-File : PlayerTest
+File : SquareTest
 Authors : Carpita Edoardo, Dutu Launay Marion, Moreira Erwan
 Date : 01-05-2019
 
