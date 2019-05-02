@@ -79,9 +79,8 @@ public class MonopolyGameTest {
     public void aPlayerShouldReceiveMoneyWhenGameBegins() {
         try {
             MonopolyGame mgame = new MonopolyGame(4);
-            mgame.playGame();
             for (Player p : mgame.getPlayers()) {
-                assertEquals(p.getCash(), mgame.STARTMONEY);
+                assertEquals( mgame.STARTMONEY, p.getCash());
             }
         } catch (Exception e) {
             e.printStackTrace();

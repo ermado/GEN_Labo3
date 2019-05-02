@@ -61,7 +61,7 @@ public class MonopolyGame {
 
     private void play() {
         for (int round = 0; round < NBROUNDS; ++round) {
-            System.out.println("Round - " + round);
+            System.out.println("Round - " + (round+1));
             playRound();
         }
 
