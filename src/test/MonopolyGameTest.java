@@ -75,4 +75,17 @@ public class MonopolyGameTest {
         }
     }
 
+    @Test
+    public void aPlayerShouldReceiveMoneyWhenGameBegins() {
+        try {
+            MonopolyGame mgame = new MonopolyGame(4);
+            mgame.playGame();
+            for (Player p : mgame.getPlayers()) {
+                assertEquals(p.getCash(), mgame.STARTMONEY);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }

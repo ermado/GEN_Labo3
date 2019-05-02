@@ -18,11 +18,12 @@ import java.util.ArrayList;
 
 public class MonopolyGame {
 
+    public static final int STARTMONEY = 1500;
+
     private static final int MAXPLAYERS = 8;
     private static final int MINPLAYERS = 2;
     private static final int NBROUNDS = 20;
     private static final int NBDICES = 2;
-    private static final int STARTMONEY = 1500;
 
     private int nbPlayers;
     private Board board;
@@ -88,6 +89,10 @@ public class MonopolyGame {
             player.takeTurn();
             System.out.println();
         }
+    }
+
+    public ArrayList<Player> getPlayers() {
+        return players;
     }
 
 }
