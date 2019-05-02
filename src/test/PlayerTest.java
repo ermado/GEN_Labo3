@@ -94,6 +94,5 @@ public class PlayerTest {
         Player player = new Player(Piece.CAT, cup, board);
         player.takeTurn();
         assertEquals("10 Jail", player.getLocation().toString());
-
     }
 }
