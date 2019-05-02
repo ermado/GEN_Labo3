@@ -24,6 +24,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PlayerTest {
 
+    private static final int MONEYBEFOREGOSQUARE = 0;
+    private static final int MONEYAFTERGOSQUARE = 200;
+    private static final int MONEYRICHPLAYER = 5500;
+    private static final int MONEYPOORPLAYER = 300;
+    private static final int MAXIMUMTAXES = 200;
+
     private class PipedDie extends Die {
 
         private int value;
@@ -95,4 +101,60 @@ public class PlayerTest {
         player.takeTurn();
         assertEquals("10 Jail", player.getLocation().toString());
     }
+
+    @Test
+    public void aPlayerThatLandOnaGoSquareShouldReceiveMoney() {
+        ArrayList<Die> pipedDices = new ArrayList<Die>();
+        Die d1 = new PipedDie(20);
+        Die d2 = new PipedDie(20);
+        pipedDices.add(d1);
+        pipedDices.add(d2);
+        cup = new Cup(2);
+        cup.setDices(pipedDices);
+
+        Player player = new Player(Piece.CAT, cup, board);
+        assertEquals(MONEYBEFOREGOSQUARE, player.getCash());
+        player.takeTurn();
+        assertEquals("0 GO!", player.getLocation().toString());
+        assertEquals(MONEYAFTERGOSQUARE, player.getCash());
+        player.takeTurn();
+        assertEquals(MONEYAFTERGOSQUARE * 2, player.getCash());
+    }
+
+    @Test
+    public void aRichPlayerThatLandOnaTaxSquareShouldBeTaxedMaximalValue() {
+        ArrayList<Die> pipedDices = new ArrayList<Die>();
+        Die d1 = new PipedDie(1);
+        Die d2 = new PipedDie(2);
+        pipedDices.add(d1);
+        pipedDices.add(d2);
+        cup = new Cup(2);
+        cup.setDices(pipedDices);
+
+        Player player = new Player(Piece.CAT, cup, board);
+        player.setCash(MONEYRICHPLAYER);
+
+        player.takeTurn();
+        assertEquals("3 Income Tax", player.getLocation().toString());
+        assertEquals(MONEYRICHPLAYER - MAXIMUMTAXES, player.getCash());
+    }
+
+    @Test
+    public void aPoorPlayerThatLandOnaTaxSquareShouldBeTaxedProportionally() {
+        ArrayList<Die> pipedDices = new ArrayList<Die>();
+        Die d1 = new PipedDie(1);
+        Die d2 = new PipedDie(2);
+        pipedDices.add(d1);
+        pipedDices.add(d2);
+        cup = new Cup(2);
+        cup.setDices(pipedDices);
+
+        Player player = new Player(Piece.CAT, cup, board);
+        player.setCash(MONEYPOORPLAYER);
+
+        player.takeTurn();
+        assertEquals("3 Income Tax", player.getLocation().toString());
+        assertEquals(MONEYPOORPLAYER - (MONEYPOORPLAYER * 0.1), player.getCash());
+    }
+
 }
