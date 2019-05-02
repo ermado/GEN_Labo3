@@ -42,16 +42,31 @@ public class Board {
 
         while ((line = br.readLine()) != null) {
             if (line != "") {
-                /* all valuable info are divided with a tab in the config file */
+                /* all valuable info are divided with a ; in the config file */
                 List<String> lineTab = new ArrayList<String>(Arrays.asList(line.split(";")));
                 String typeOfSquare = lineTab.get(0);
 
-                if (typeOfSquare.equals("GTJail")) {
-                    Square square = new GoToJailSquare(lineTab.get(2), counter++);
-                    squaresOfTheBoard.add(square);
-                } else {
-                    Square square = new RegularSquare(lineTab.get(2), counter++);
-                    squaresOfTheBoard.add(square);
+                switch (typeOfSquare) {
+                    case "GTJail": {
+                        Square square = new GoToJailSquare(lineTab.get(2), counter++);
+                        squaresOfTheBoard.add(square);
+                        break;
+                    }
+                    case "Tax": {
+                        Square square = new IncomeTaxSquare(lineTab.get(2), counter++);
+                        squaresOfTheBoard.add(square);
+                        break;
+                    }
+                    case "Go": {
+                        Square square = new GoSquare(lineTab.get(2), counter++);
+                        squaresOfTheBoard.add(square);
+                        break;
+                    }
+                    default: {
+                        Square square = new RegularSquare(lineTab.get(2), counter++);
+                        squaresOfTheBoard.add(square);
+                        break;
+                    }
                 }
             }
         }

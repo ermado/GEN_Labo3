@@ -69,7 +69,17 @@ public class Player {
         return cash;
     }
 
+    public void addCash(double addedCash) {
+        this.cash += addedCash;
+    }
+
+    public void reduceCash(double removedCash){
+        this.cash -= removedCash;
+    }
+
     public void setCash(double cash) {
         this.cash = cash;
     }
+
+
 }
