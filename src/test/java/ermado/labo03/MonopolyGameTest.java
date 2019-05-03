@@ -76,9 +76,11 @@ public class MonopolyGameTest {
         try {
             MonopolyGame mgame = new MonopolyGame(10);
             mgame.playGame();
-            assertEquals("------Playing the game!------\r\n" +
+            String expected = String.format("------Playing the game!------%nSorry, too many players to play the game%n------End of the game!-------%n");
+            /*assertEquals("------Playing the game!------\r\n" +
                     "Sorry, too many players to play the game\r\n" +
-                    "------End of the game!-------\r\n", outContent.toString());
+                    "------End of the game!-------\r\n", outContent.toString());*/
+            assertEquals(expected, outContent.toString());
         } catch (Exception e) {
             e.printStackTrace();
         }
