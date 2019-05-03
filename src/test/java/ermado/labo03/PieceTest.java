@@ -8,7 +8,7 @@ Brief : This class implements the tests on the Piece class.
 
 ---------------------------------------------------------*/
 
-import main.*;
+package ermado.labo03;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

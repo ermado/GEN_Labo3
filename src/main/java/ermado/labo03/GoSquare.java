@@ -1,15 +1,13 @@
-/* ------------------------------------------------------
+package ermado.labo03;/* ------------------------------------------------------
 GEN- LAB 3
-File : GoSquare
+File : ermado.labo03.GoSquare
 Authors : Carpita Edoardo, Dutu Launay Marion, Moreira Erwan
 Date : 01-05-2019
 
-Brief : This class implements the GoSquare, which is the first
+Brief : This class implements the ermado.labo03.GoSquare, which is the first
         square of the board.
 
 ---------------------------------------------------------*/
-
-package main;
 
 public class GoSquare extends Square {
 

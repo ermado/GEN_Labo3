@@ -12,6 +12,7 @@ Brief : This class implements the tests on the MonopolyGame class.
 
 ---------------------------------------------------------*/
 
+package ermado.labo03;
 import main.*;
 import org.junit.jupiter.api.*;
 import java.io.ByteArrayOutputStream;

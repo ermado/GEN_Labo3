@@ -8,7 +8,7 @@ Brief : This class implement the tests on the Die class.
 
 ---------------------------------------------------------*/
 
-import main.Die;
+package ermado.labo03;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 

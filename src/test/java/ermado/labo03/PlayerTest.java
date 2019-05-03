@@ -13,7 +13,7 @@ Brief : This class implements the tests on the Player class.
 
 ---------------------------------------------------------*/
 
-import main.*;
+package ermado.labo03;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.io.IOException;

@@ -1,6 +1,6 @@
-/* ------------------------------------------------------
+package ermado.labo03;/* ------------------------------------------------------
 GEN- LAB 3
-File : Player
+File : ermado.labo03.Player
 Authors : Carpita Edoardo, Dutu Launay Marion, Moreira Erwan
 Date : 01-05-2019
 
@@ -16,8 +16,6 @@ Brief : This class implements the players of the game.
         implementations.
 
 ---------------------------------------------------------*/
-
-package main;
 
 public class Player {
     private Board board;

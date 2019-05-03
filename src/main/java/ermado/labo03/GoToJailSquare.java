@@ -1,4 +1,4 @@
-/* ------------------------------------------------------
+package ermado.labo03;/* ------------------------------------------------------
 GEN- LAB 3
 File : JailSquare
 Authors : Carpita Edoardo, Dutu Launay Marion, Moreira Erwan
@@ -8,8 +8,6 @@ Brief : This class implements the Jail square in the Monopoly
         game.
 
 ---------------------------------------------------------*/
-
-package main;
 
 public class GoToJailSquare extends Square {
 

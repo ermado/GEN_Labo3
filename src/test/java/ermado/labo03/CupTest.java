@@ -7,8 +7,7 @@ Date : 01-05-2019
 Brief : This class implements the tests on the Cup class.
 
 ---------------------------------------------------------*/
-
-import main.*;
+package ermado.labo03;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;

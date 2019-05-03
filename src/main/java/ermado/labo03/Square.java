@@ -1,6 +1,6 @@
-/* ------------------------------------------------------
+package ermado.labo03;/* ------------------------------------------------------
 GEN- LAB 3
-File : Square
+File : ermado.labo03.Square
 Authors : Carpita Edoardo, Dutu Launay Marion, Moreira Erwan
 Date : 01-05-2019
 
@@ -11,8 +11,6 @@ Brief : This abstract class defines the squares that compose the
         has a name and a corresponding number.
 
 ---------------------------------------------------------*/
-
-package main;
 
 public abstract class Square {
     private String name;
