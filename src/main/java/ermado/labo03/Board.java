@@ -13,7 +13,7 @@ Brief : This class implements the board of the game. We decided
 
 ---------------------------------------------------------*/
 
-package main;
+package ermado.labo03;
 
 import java.io.*;
 import java.util.ArrayList;

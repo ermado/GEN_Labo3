@@ -1,6 +1,6 @@
-/* ------------------------------------------------------
+package ermado.labo03;/* ------------------------------------------------------
 GEN- LAB 3
-File : Die
+File : ermado.labo03.Die
 Authors : Carpita Edoardo, Dutu Launay Marion, Moreira Erwan
 Date : 01-05-2019
 
@@ -10,8 +10,6 @@ Brief : This class implements a die used by the players to move
         Every die has a 6 faces, with each a value from 1 to 6.
 
 ---------------------------------------------------------*/
-
-package main;
 
 import java.util.Random;
 

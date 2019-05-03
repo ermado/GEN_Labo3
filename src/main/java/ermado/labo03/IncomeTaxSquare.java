@@ -1,6 +1,6 @@
-/* ------------------------------------------------------
+package ermado.labo03;/* ------------------------------------------------------
 GEN- LAB 3
-File : IncomeTaxSquare
+File : ermado.labo03.IncomeTaxSquare
 Authors : Carpita Edoardo, Dutu Launay Marion, Moreira Erwan
 Date : 01-05-2019
 
@@ -8,8 +8,6 @@ Brief : This class implements the Income Tax square in the
         Monopoly game.
 
 ---------------------------------------------------------*/
-
-package main;
 
 import static java.lang.Double.min;
 

@@ -1,6 +1,6 @@
-/* ------------------------------------------------------
+package ermado.labo03;/* ------------------------------------------------------
 GEN- LAB 3
-File : MonopolyGame
+File : ermado.labo03.MonopolyGame
 Authors : Carpita Edoardo, Dutu Launay Marion, Moreira Erwan
 Date : 01-05-2019
 
@@ -10,8 +10,6 @@ Brief : This class implements the main program of the game
         user entries (ex: a valid number of players)
 
 ---------------------------------------------------------*/
-
-package main;
 
 import java.io.IOException;
 import java.util.ArrayList;

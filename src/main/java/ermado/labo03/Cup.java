@@ -1,16 +1,14 @@
-/* ------------------------------------------------------
+package ermado.labo03;/* ------------------------------------------------------
 GEN- LAB 3
-File : Cup
+File : ermado.labo03.Cup
 Authors : Carpita Edoardo, Dutu Launay Marion, Moreira Erwan
 Date : 01-05-2019
 
-Brief : This class implements the Cup class, which contains
+Brief : This class implements the ermado.labo03.Cup class, which contains
         a given number of dices. When we roll a cup, in fact
         we roll all the dices contained in it.
 
 ---------------------------------------------------------*/
-
-package main;
 
 import java.util.ArrayList;
 

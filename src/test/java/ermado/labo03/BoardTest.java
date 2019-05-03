@@ -7,15 +7,14 @@ Date : 01-05-2019
 Brief : This class implements the tests on the Board class.
 
 ---------------------------------------------------------*/
-
-import main.*;
+package ermado.labo03;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.util.logging.Logger;
 import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class BoardTest {
+public class BoardTest {
 
     private Board board;
     private static final Logger LOG = Logger.getLogger("log");

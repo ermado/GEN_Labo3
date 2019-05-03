@@ -1,6 +1,6 @@
-/* ------------------------------------------------------
+package ermado.labo03;/* ------------------------------------------------------
 GEN- LAB 3
-File : Piece
+File : ermado.labo03.Piece
 Authors : Carpita Edoardo, Dutu Launay Marion, Moreira Erwan
 Date : 01-05-2019
 
@@ -11,8 +11,6 @@ Brief : This enum class implements all the pieces of a Monopoly
         a proper String name to its components.
 
 ---------------------------------------------------------*/
-
-package main;
 
 public enum Piece {
 
